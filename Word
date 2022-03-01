@@ -1,0 +1,53 @@
+def count_nwords(s, n = 1):
+    '''
+    count the number of occurance of n-words in a string
+    Input: s, the string
+           n, the size of n-words to count
+    Output: a dictionary keyed by n-words whose values are number of occurance in s
+    '''
+    counts = {}
+    words = s.split()
+    for i in range(len(words) - n + 1):
+        nwords = tuple(words[i:(i+n)])
+        if nwords in counts:
+            counts[nwords] += 1
+        else:
+            counts[nwords] = 1
+    return counts
+    
+    
+    import random
+
+def markov_text_word(s, n, length = 100, seed = "Emma Woodhouse"):
+    """
+    Generate fake text according to an n-th order Markov model
+    s: the text from which to learn words
+    n: the order of the Markov model
+    length: the number of synthetic words to generate.
+    seed: the initial string.
+    """
+    counts = count_nwords(s, n+1)
+    
+    # initialize
+    fake = seed
+    for i in range(length):
+        previous = tuple(fake.split()[(-n):])
+        
+        # filter dict to keep only matching grams
+        sub = {}
+        for key in counts:
+            if key[:n] == previous:
+                sub[key] = counts[key]
+                
+        # convert to lists for use with random.choices
+        choices = list(sub.keys())
+        weights = [sub[key] for key in choices]
+
+        # make choice 
+        new_nword = random.choices(choices, weights)[0]
+        
+        # add to s
+        new_word = new_nword[-1]
+        fake += " " + new_word
+    
+    return fake
