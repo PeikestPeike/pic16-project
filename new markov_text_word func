@@ -1,0 +1,47 @@
+ def markov_text_word(self):
+        '''
+        Generate fake text with words as units.
+        Args:
+            None
+        Returns:
+            fake: a string, the fake text
+        '''  
+        # test the input
+        if self.n > len(self.seed.split()):
+            raise ValueError("n has to be smaller or equal to the number of words in seed.")
+ 
+        # initialize
+        word_dict = count_nwords(self.text, self.n + 1)
+        fake = self.seed
+        
+        while len(fake.split()) < self.length:
+            previous = tuple(fake.split()[(-self.n):])
+
+            # filter dict to keep only matching grams
+            sub = {}
+            for key in word_dict:
+                if key[:self.n] == previous:
+                    sub[key] = word_dict[key]
+            
+            # convert to lists for use with random.choices
+            choices = list(sub.keys())
+            weights = [sub[key] for key in choices]
+
+            # make choice
+            # if no possible choice could be found, try to decrease n by 1.
+            try:
+                new_nword = random.choices(choices, weights)[0]
+            except IndexError:
+                if self.n > 1:
+                    self.n -= 1
+                    print("cannot find matching words, trying n-1 =", self.n)
+                    return self.markov_text_word()
+                else:
+                    print("Please try another seed.")
+                    return
+
+            # add to s
+            new_word = new_nword[-1]
+            fake += " " + new_word
+    
+        return fake
