@@ -42,7 +42,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 # References and acknowledgements:
-// shoutout to Harlin and Puppycat for getting us through the quarter
+http://pythonicprose.blogspot.com/2009/09/python-split-paragraph-into-sentences.html
+Also shoutout to Harlin and Puppycat for getting us through the quarter
 
 # Background and source of dataset (if applicable):
 //
