@@ -208,7 +208,7 @@ class MarkovText():
         start = random.randint(0, len(self.text) - len(fake_text))
         original_text = self.text[start:(start + len(fake_text))]
         original_text_score = round(reading_ease_score(original_text), 2)
-        print("RE for original text: " + str(original_text_score) + "\n", 
-              "RE for fake text: " + str(fake_text_score))
+        print("RE for original text: " + str(original_text_score), 
+              "\nRE for fake text: " + str(fake_text_score))
         
         
