@@ -4,7 +4,7 @@
 MarkovChain.v2
 
 # Group Members:
-Peiki Le, Yuxuan Li, Johnny Tu
+Peike Li, Yuxuan Shi, Johnny Tu
 
 # Project description:
 Using a source text, MarkovChain.v2 will generate a fake text using units of words.
