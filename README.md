@@ -1,15 +1,15 @@
 # pic16A-project
 
-# Project title: 
-MarkovChain.v2
+# Project Name: 
+MarkovText.v2
 
 # Group Members:
 Peike Li, Yuxuan Shi, Johnny Tu
 
-# Project description:
-Using a source text, MarkovChain.v2 will generate a fake text using units of words.
+# Project Description:
+MarkovText.v2 is a simplified Markov Language Model. It models a text corpus and generates a fake text from it, using units of words. To compare two texts, it can computes the [Flesch reading ease score](https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests) for the two texts.
 
-# Instructions on package installments:
+# Instructions on Package Installments:
 conda create --name NEWENV --file requirements.txt
 
 # Description of demo file:
