@@ -215,8 +215,7 @@ class MarkovText():
     
     def make_a_sentence(self):
         '''
-        Generate one sentence. Prompt the user to choose whether to 
-        generate this sentence by characters or by words.
+        Generate only one "complete" sentence that ends with the ending symbols .!?:;
         Arg:
             None
         Return:
