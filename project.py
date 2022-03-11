@@ -2,29 +2,6 @@ import random
 import re
 import numpy as np
 
-def count_ngrams(s, n=1):
-    """
-    Count the number of occurrences of n-grams in a string.
-    Input:
-        s: str, the string in which to count. 
-        n: the size of n-grams to count. 
-    Return:
-        counts, a dict keyed by n-grams whose values are the number of occurrences in s
-    """
-    # initialize an empty dictionary
-    counts = {}
-    
-    # loop through substrings of length n of 
-    # the input string, updating counts as before
-    for i in range(len(s)-n+1):
-        gram = s[i:(i+n)]
-        if gram in counts:
-            counts[gram] += 1
-        else:
-            counts[gram] = 1
-
-    return counts
-
 def count_nwords(s, n = 1):
     '''
     count the number of occurance of n-words in a string
