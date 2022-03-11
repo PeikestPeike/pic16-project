@@ -7,7 +7,7 @@ MarkovChain.v2
 Peiki Le, Yuxuan Li, Johnny Tu
 
 # Project description:
-Using a source text, MarkovChain.v2 will generate a fake text using units of characters, words, or sentences, depending on user input.
+Using a source text, MarkovChain.v2 will generate a fake text using units of words.
 
 # Instructions on package installments:
 conda create --name NEWENV --file requirements.txt
