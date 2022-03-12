@@ -1,6 +1,4 @@
-# pic16A-project
-
-# Project Name: 
+# Project Name:
 MarkovText.v2
 
 # Group Members:
