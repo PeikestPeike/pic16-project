@@ -5,7 +5,7 @@ MarkovText.v2
 Peike Li, Yuxuan Shi, Johnny Tu
 
 # Project Description:
-MarkovText.v2 is a simplified Markov Language Model. It models a text corpus and generates a fake text from it, using units of words. To compare two texts, it can computes the [Flesch reading ease score](https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests) for the two texts.
+MarkovText.v2 is a simplified Markov Language Model. It models a text corpus and generates a fake text from it, using units of words. To compare two texts, it can compute the [Flesch reading ease score](https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests) for the two texts.
 
 # Instructions on Package Installments:
 conda create --name NEWENV --file requirements.txt
