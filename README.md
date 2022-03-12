@@ -15,10 +15,16 @@ conda create --name NEWENV --file requirements.txt
 
 1. After you download the repo, you'll find the demo file called demo.ipynb. Open it to test the functionalities of the class MarkovText.
 2. Run the first cell to import the class and all the functions. Run the second cell to load the Emma text file into the environment.
-3. 
-4. Run the cell shown in the below figure to create an object of the class MarkovText. You can change the length to any number you want, but don't make it too large
+3. Run the cell shown below to test what happens if the function cannot generate appropriate text with the original input seed and n. The function will automatically try n-1 and call itself again to generate the fake text. The expected output in this case should be the random text that is successfully generated.
+<img width="989" alt="image" src="https://user-images.githubusercontent.com/97068696/157997642-55604b01-f1a8-432a-8b2d-6615eb843189.png">
+4. Run the cell shown below to create an object of the class MarkovText. n represents n-gram, length represents the expected number of words of the text generated, and seed represents the starting word of the fake text. You can change the length to another number, but don't make it too large for your convenience. 
 <img width="901" alt="image" src="https://user-images.githubusercontent.com/97068696/157996178-6f979e17-6a09-4186-8692-e6f0dd3b500e.png">
-5. Run the cell shown below to call the function to generate 
+5. Run the cell shown below to call the function that generates fake text. The expected output should be a string with about <length> words.
+<img width="975" alt="image" src="https://user-images.githubusercontent.com/97068696/157997066-481b642d-58f1-4c35-b3a3-7edcb5c71f22.png">
+6. Run the cell shown below to call the function that generates exactly one sentence. The expected output should be a string with only one sentence.
+<img width="995" alt="image" src="https://user-images.githubusercontent.com/97068696/157997176-7725df5b-411b-45c4-8573-a4ad1e145367.png">
+7. Run the cell shown below to call the function that computes and prints the Flesch reading ease score for the fake text and the original text with the same length. This reading score represents the readablity of the text. The higher the score is, the easier it is to read the text. The scores would change each time you run this cell, because our model generates different random text and select the original text randomly each time. To learn more about how the reading ease score is calculated, click the link in Project Description.
+<img width="1010" alt="image" src="https://user-images.githubusercontent.com/97068696/157997501-f045fd25-e764-47f4-8466-65fcd5582388.png">
 
 # Scopes and limitations:
 The reading scores computed may have large variations and are only used as references for the comparison between fake text and original text.
